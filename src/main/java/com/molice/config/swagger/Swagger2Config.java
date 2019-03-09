@@ -1,4 +1,4 @@
-package com.molice.springbootlearningexample.config;
+package com.molice.config.swagger;
 
 import com.google.common.collect.Sets;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.molice.springbootlearningexample;
+package com.molice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

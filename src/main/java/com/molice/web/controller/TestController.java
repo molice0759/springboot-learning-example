@@ -1,4 +1,4 @@
-package com.molice.springbootlearningexample.web.controller;
+package com.molice.web.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
