@@ -19,7 +19,7 @@ public class TestController {
 
     @GetMapping("test")
     @ApiOperation("测试test")
-    public Object test() {
+    public Date test() {
         return new Date();
     }
 }
