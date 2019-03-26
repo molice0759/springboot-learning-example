@@ -10,10 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication(scanBasePackages = { "com.molice"})
 @EnableAutoConfiguration
-public class SpringbootLearningExampleApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootLearningExampleApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
