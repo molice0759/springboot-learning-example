@@ -46,8 +46,22 @@ spring:
       #开启驼峰命名转换
       map-underscore-to-camel-case: true
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 0
+    database: 0
+    pool:
+      max-active: 100
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
 
 ###日志配置###
 logging:
   config: classpath:logback-spring.xml
+
+redis:
+  limit: 1000
 

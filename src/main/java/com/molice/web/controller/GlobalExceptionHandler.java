@@ -1,6 +1,7 @@
 package com.molice.web.controller;
 
 import com.molice.annotation.DataPack;
+import com.molice.exception.CommonLimitException;
 import com.molice.exception.ServiceException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
@@ -8,8 +9,6 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -24,7 +23,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = BindException.class)
     @DataPack
-    public Object UnauthorizedExceptionHandler(BindException ex){
+    public Object unauthorizedExceptionHandler(BindException ex){
         System.out.println("=====================BindException异常信息捕获=======================");
         ObjectError result = null;
         BindingResult bindingResult = ex.getBindingResult();
@@ -37,6 +36,14 @@ public class GlobalExceptionHandler {
             throw new ServiceException(result.getDefaultMessage());
         }
         return 1;
+    }
+
+    @ExceptionHandler(value = CommonLimitException.class)
+    @DataPack
+    public void commonLimitExceptionHandler(CommonLimitException ex) {
+        System.out.println("=============限流================");
+        throw new ServiceException(ex.getMessage());
+
     }
 
 }
