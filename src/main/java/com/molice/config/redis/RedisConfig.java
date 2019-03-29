@@ -55,8 +55,8 @@ public class RedisConfig {
     }
 
 
-    @Bean
-    public RedisLock build() {
+    @Bean("redisLock")
+    public RedisLock redisLock() {
         RedisLock redisLock = new RedisLock.Builder(jedisConnectionFactory, RedisToolsConstant.SINGLE)
                 .lockPrefix("lock_")
                 .sleepTime(100)

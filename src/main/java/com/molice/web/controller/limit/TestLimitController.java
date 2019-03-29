@@ -1,7 +1,6 @@
-package com.molice.web.controller;
+package com.molice.web.controller.limit;
 
 import com.crossoverjie.distributed.annotation.CommonLimit;
-import com.crossoverjie.distributed.annotation.ControllerLimit;
 import com.molice.annotation.DataPack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

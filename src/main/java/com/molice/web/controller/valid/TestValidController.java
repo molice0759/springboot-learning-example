@@ -1,4 +1,4 @@
-package com.molice.web.controller;
+package com.molice.web.controller.valid;
 
 import com.molice.annotation.DataPack;
 import com.molice.vo.School;

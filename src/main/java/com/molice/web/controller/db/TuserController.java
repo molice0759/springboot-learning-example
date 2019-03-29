@@ -1,4 +1,4 @@
-package com.molice.web.controller;
+package com.molice.web.controller.db;
 
 
 import com.molice.annotation.DataPack;
