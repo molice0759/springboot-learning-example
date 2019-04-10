@@ -45,9 +45,9 @@ public class AsyncServiceImpl implements AsyncService {
     }
 
     /**
-     * 返回值是Futrue的异步方法异常捕获:a) 一种是在调用future的get时捕获异常; b) 在异常方法中直接捕获异常
+     * 返回值是Future的异步方法异常捕获:a) 一种是在调用future的get时捕获异常; b) 在异常方法中直接捕获异常
      * 对于返回值是Future，不会被AsyncUncaughtExceptionHandler处理，需要我们在方法中捕获异常并处理
-     * 或者在调用方在调用Futrue.get时捕获异常进行处理
+     * 或者在调用方在调用Future.get时捕获异常进行处理
      * @param count
      * @return
      */
