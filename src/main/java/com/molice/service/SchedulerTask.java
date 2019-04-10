@@ -23,12 +23,12 @@ public class SchedulerTask {
     private int count = 0;
 
     //@Scheduled(cron = "0 22 16 * * ?")
-    @Scheduled(cron = "*/6 * * * * ?")
+    //@Scheduled(cron = "*/6 * * * * ?")
     private void process() {
         logger.info("this is scheduler task running " + (count++));
     }
 
-    @Scheduled(fixedRate = 6000)
+    //@Scheduled(fixedRate = 6000)
     public void reportCurrentTime() {
         logger.info("现在的时间：" + SIMPLE_DATE_FORMAT.format(new Date()));
     }

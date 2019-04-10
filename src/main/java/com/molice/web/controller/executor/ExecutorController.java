@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+
 /**
  * @author molice
  * @date 2019/4/9
@@ -37,5 +40,22 @@ public class ExecutorController {
         logger.info("end submit");
 
         return "success";
+    }
+
+    @GetMapping("/test1")
+    @ApiOperation("异步带参数")
+    @DataPack
+    public Object executeAsyncWithParameter() {
+        asyncService.executeAsyncWithParameter("test");
+        return "";
+    }
+
+    @GetMapping("/test2")
+    @ApiOperation("异步带返回值")
+    @DataPack
+    public Object executeAsyncReturnFuture() throws ExecutionException, InterruptedException {
+        Future<String> future = asyncService.executeAsyncReturnFuture(1);
+        String s = future.get();
+        return s;
     }
 }
