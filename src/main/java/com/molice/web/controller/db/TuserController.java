@@ -25,7 +25,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/tuser")
-@Api("用户")
+@Api(tags = "用户")
 public class TuserController {
 
     @Resource

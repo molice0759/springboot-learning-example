@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
  **/
 @RestController
 @RequestMapping("executor")
-@Api
+@Api(tags = "异步调用")
 public class ExecutorController {
 
     private static final Logger logger = LoggerFactory.getLogger(ExecutorController.class);

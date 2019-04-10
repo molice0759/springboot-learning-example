@@ -6,3 +6,4 @@ springboot学习
 - 3、统一json数据返回格式，参考DataPackDecorator类
 - 4、添加分布式redis锁和基于redis的限流
 - 5、添加定时器和异步请求
+- 6、redis通用保存方法（使用函数式接口编程）

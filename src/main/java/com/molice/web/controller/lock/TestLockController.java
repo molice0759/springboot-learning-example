@@ -2,6 +2,8 @@ package com.molice.web.controller.lock;
 
 import com.crossoverjie.distributed.lock.RedisLock;
 import com.molice.annotation.DataPack;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +20,7 @@ import java.util.UUID;
  **/
 @RestController
 @RequestMapping("lock")
+@Api(tags = "分布式锁")
 public class TestLockController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TestLockController.class);
@@ -27,6 +30,7 @@ public class TestLockController {
 
     @GetMapping("test")
     @DataPack
+    @ApiOperation("测试")
     public Object lock() {
         String key = "key";
         String request = UUID.randomUUID().toString();
