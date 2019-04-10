@@ -3,6 +3,7 @@ package com.molice.config.executor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
@@ -21,16 +22,12 @@ public class MyAsyncConfigurer implements AsyncConfigurer {
 
     private static final Logger log = LoggerFactory.getLogger(MyAsyncConfigurer.class);
 
+    @Autowired
+    private ExecutorConfig executorConfig;
+
     @Override
     public Executor getAsyncExecutor() {
-        ThreadPoolTaskExecutor threadPool = new ThreadPoolTaskExecutor();
-        threadPool.setCorePoolSize(1);
-        threadPool.setMaxPoolSize(1);
-        threadPool.setWaitForTasksToCompleteOnShutdown(true);
-        threadPool.setAwaitTerminationSeconds(60 * 15);
-        threadPool.setThreadNamePrefix("MyAsync-");
-        threadPool.initialize();
-        return threadPool;
+        return executorConfig.asyncServiceExecutor();
     }
 
     @Override
