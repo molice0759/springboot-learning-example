@@ -1,1 +1,1 @@
-from molice.io/springboot-learning-example:1.0
+from molice/springboot-learning-example:1.0
