@@ -1,0 +1,1 @@
+from molice.io/springboot-learning-example:1.0
