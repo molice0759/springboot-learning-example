@@ -1,1 +1,1 @@
-from molice/springboot-learning-example:1.0
+FROM k8s.gcr.io/pause:3.1
