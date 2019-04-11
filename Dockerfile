@@ -1,1 +1,4 @@
-FROM k8s.gcr.io/pause:3.1
+FROM maven:3-jdk-8-alpine as MVN_BUILD
+
+
+FROM openjdk:8-alpine
