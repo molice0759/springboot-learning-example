@@ -13,5 +13,30 @@ public interface RedisCacheService {
      * @param <T>
      * @return
      */
-    <T extends Object> T findCache(String key, long expire, LoadCallback<T> loadCallback);
+    <T extends Object> T findCache(String key, Long expire, LoadCallback<T> loadCallback);
+
+    <T extends Object> T findCache(String key, LoadCallback<T> loadCallback);
+
+    <T extends Object> T findCache(String key);
+
+    /**
+     * 自增长数字缓存
+     * @param key
+     * @param increment
+     */
+    long incrementCache(String key, long increment);
+
+    int incrementCache(String key, int increment);
+
+    /**
+     * 删除指定的key
+     * @param key
+     */
+    void remove(String key);
+
+    /**
+     * 模糊删除
+     * @param pattern
+     */
+    void removeByPattern(String pattern);
 }
