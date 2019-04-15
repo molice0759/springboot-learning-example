@@ -31,7 +31,7 @@ public class FunctionController {
     @DataPack
     @ApiOperation("测试")
     public Object test() {
-        List<Tuser> tusers = redisCacheService.findCache("test", 60, () -> tuserService.getList());
+        List<Tuser> tusers = redisCacheService.findCache("test", Long.valueOf(60), () -> tuserService.getList());
         return tusers;
     }
 }
