@@ -7,7 +7,8 @@
         <module>mq-consumer</module>
 		<module>mq-producer</module>
 		<module>core-web</module>
-	</modules>
+        <module>core-common</module>
+    </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -27,6 +28,8 @@
 		<mybatis-plus.version>2.2.0</mybatis-plus.version>
 		<mybatis.generator.version>1.3.5</mybatis.generator.version>
 		<swagger.version>2.8.0</swagger.version>
+		<activiti.version>5.22.0</activiti.version>
+		<fastjson.version>1.2.47</fastjson.version>
 	</properties>
 
 	<dependencies>
@@ -44,6 +47,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
 		</dependency>
 
 	</dependencies>

@@ -11,5 +11,19 @@
 
     <artifactId>mq-consumer</artifactId>
 
+    <dependencies>
+        <!-- 添加springboot对amqp的支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.molice</groupId>
+            <artifactId>core-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
 
 </project>
