@@ -5,6 +5,10 @@ spring:
     addresses: 127.0.0.1:5672
     virtual-host: /
     connection-timeout: 15000
+    ##开启Publisher Confirm机制 采用消息确认模式，消息发送后异步等待Broker响应
+    publisher-confirms: true
+    ##开启Publisher Return机制
+    publisher-returns: true
   http:
     encoding:
       charset: utf-8
