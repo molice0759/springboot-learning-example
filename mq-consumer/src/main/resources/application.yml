@@ -7,9 +7,13 @@ spring:
     connection-timeout: 15000
     listener:
       simple:
+        ##消费者的最小数量
         concurrency: 5
+        ## manual:手动 ack（确认）
         acknowledge-mode: manual
+        ##消费者的最大数量
         max-concurrency: 10
+        ##在单个请求中处理的消息个数，应该大于等于事务数量
         prefetch: 1
 
   http:
