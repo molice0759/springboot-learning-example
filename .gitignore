@@ -23,3 +23,14 @@
 /nbdist/
 /.nb-gradle/
 /build/
+core-common/src/main/resources/
+core-common/src/test/
+core-common/target/
+core-web/src/main/java/com/molice/constant/
+core-web/src/main/java/com/molice/mapper/xml/
+core-web/target/
+logs/
+mq-consumer/src/test/
+mq-consumer/target/
+mq-producer/logs/
+mq-producer/target/
