@@ -1,5 +1,7 @@
 package com.molice.entity;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
@@ -14,6 +16,7 @@ import java.io.Serializable;
  * @author molice
  * @since 2019-03-09
  */
+@TableName("tuser")
 public class Tuser extends Model<Tuser> {
 
     private static final long serialVersionUID = 1L;
@@ -26,26 +29,32 @@ public class Tuser extends Model<Tuser> {
     /**
      * 用户名称
      */
+    @TableField("staffName")
     private String staffName;
     /**
      * 员工号
      */
+    @TableField("staffNum")
     private String staffNum;
     /**
      * 用户密码
      */
+    @TableField("password")
     private String password;
     /**
      * 创建时间
      */
+    @TableField("createtime")
     private Date createtime;
     /**
      * 0:删除 ， 1:整除 ，2:其他
      */
+    @TableField("deleteflag")
     private Integer deleteflag;
     /**
      * 管理人标准
      */
+    @TableField("isAdmin")
     private Integer isAdmin;
 
 
