@@ -8,6 +8,7 @@
 		<module>mq-producer</module>
 		<module>core-web</module>
         <module>core-common</module>
+        <module>core-sharding-table</module>
     </modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -53,6 +54,12 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.molice</groupId>
+			<artifactId>core-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>

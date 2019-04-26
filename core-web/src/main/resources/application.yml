@@ -46,6 +46,10 @@ spring:
       max-wait: -1
       max-idle: 8
       min-idle: 0
+  # SpringAdmin 地址
+  boot:
+      admin:
+        url: http://localhost:8888
 
 ###日志配置###
 logging:
@@ -65,4 +69,12 @@ mybatis-plus:
 
 redis:
   limit: 1000
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  #关闭健康检查权限
+  security:
+    enabled: false
 
